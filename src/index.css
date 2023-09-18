@@ -1,13 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-size: 1.6rem;
+}
+
+
+h1 {
+  font-size: 6rem;
+}
+
+
+.App {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.App::before{
+  content: '';
+  background: url(./assets/1.jpg) no-repeat center/cover; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.App .search{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  height: 15vh;
+  width: 70vw;
+}
+
+.App input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  height: 10vh;
+  border-radius: 25px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  color: #f8f8f8;
+  outline: none;
+}
+
+::placeholder{
+  color: #f8f8f8;
+  
+}
+
+.container{
+  width: 70vw;
+  height: 90vh;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.App .top{
+  width: 100%;
+}
+
+.App .description{
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+
+.App .bottom{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.20);
+}
+
+.humidity{
+  margin: 0rem 3rem;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.btnMetric{
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 3;
+}
+
+.btnMetric:hover{
+  cursor: pointer;
 }
